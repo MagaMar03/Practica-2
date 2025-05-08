@@ -1,0 +1,118 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #e1bee7);
+    margin: 0;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 60px;
+    color: #333;
+    font-size: 2.8em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    width: 260px;
+    height: 340px;
+    perspective: 1200px;
+    transition: transform 0.3s ease;
+  }
+  
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+  }
+  
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+  }
+  
+  .card-front {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .card-back {
+    transform: rotateY(180deg);
+  }
+  
+  .card h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 1em;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px 24px;
+    border-radius: 8px;
+    border: 1px solid white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+  }
+  
+  a:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+  }
+  
+  /* Colores personalizados */
+  .card:nth-child(1) .card-front {
+    background: linear-gradient(135deg, #8e24aa, #d81b60);
+  }
+  
+  .card:nth-child(1) .card-back {
+    background: linear-gradient(135deg, #d81b60, #f06292);
+  }
+  
+  .card:nth-child(2) .card-front {
+    background: linear-gradient(135deg, #3949ab, #1e88e5);
+  }
+  
+  .card:nth-child(2) .card-back {
+    background: linear-gradient(135deg, #1e88e5, #64b5f6);
+  }
+  
+  .card:nth-child(3) .card-front {
+    background: linear-gradient(135deg, #2e7d32, #43a047);
+  }
+  
+  .card:nth-child(3) .card-back {
+    background: linear-gradient(135deg, #43a047, #81c784);
+  }
+  
